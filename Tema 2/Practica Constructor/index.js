@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const año = [2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010];
     const nombres = ["Pedro", "Yuyu", "Miguel", "ian", "Cuyita", "Mai", "Joaquin", "Maria", "Patry"];
 
+    var mostrarTodo = document.getElementById("mostrarContenidoObjetos");
+
 var nombreDeCursoAleatorio = nombreDeCurso[4];
 var añoCurso = año[5];
 var descripcion = "Hola esto es una descripción";
@@ -21,7 +23,7 @@ if (alumnado === undefined){
 const constructorCurso = (nombreDeCursoAleatorio, añoCurso, descripcion, alumnado) =>{
 
     var curso ={
-        "Nombre Curso": nombreDeCursoAleatorio,
+        "Nombre del Curso": nombreDeCursoAleatorio,
         "Año Del Curso": añoCurso,
         "Descripcion": descripcion,
         "Alumnado": {alumnado},
@@ -41,6 +43,7 @@ const mostrarFuncionObjeto = (curso) => {
                 mostrarFuncionObjeto(element)
             }
             else{
+                mostrarTodo.innerHTML += `<p> <span>${clave}</span> => <span>${element}</span></p>`
                  console.log(`${clave} => ${element}`)
             }
            
