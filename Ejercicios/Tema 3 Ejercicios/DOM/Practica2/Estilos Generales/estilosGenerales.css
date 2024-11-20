@@ -1,0 +1,106 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    padding-bottom: 88px; 
+    padding-top: 6px;
+    padding-right: 40px; 
+    padding-left: 40px;
+    background-color: var(--bg-default); 
+}
+
+@media (min-width: 640px) { 
+    .header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 92px; 
+    }
+}
+
+.title {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.title-wrapper {
+    margin-top: 8px;
+}
+
+.title-text {
+    font-size: 1.875rem;
+    font-weight: 800; 
+    line-height: 1.75rem;
+    letter-spacing: -0.02em; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (min-width: 768px) { 
+    .title-text {
+        font-size: 2.25rem; 
+        line-height: 2.5rem; 
+    }
+}
+
+
+.prohibido{
+color: red;
+font-weight: bolder;
+font-style: italic;
+}
+
+.primo{
+    color: red;
+    font-weight: bolder;
+}
+
+.contenedor-parrafos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+}
+
+.parrafo-comun {
+    height: 150px;
+    width: 45%; /* Ajusta para que entren dos párrafos en una fila */
+    background-color: lightblue;
+    color: darkblue;
+    border: 2px solid black;
+    padding: 10px;
+    box-shadow: 3px 3px 5px grey;
+    margin-bottom: 20px; /* Espacio entre los párrafos en las filas */
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .carrusel-imagen {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .carrusel-imagen.visible {
+    opacity: 1;
+  }
+  
+  img {
+    width: 300px;
+    height: 200px;
+  }
+  

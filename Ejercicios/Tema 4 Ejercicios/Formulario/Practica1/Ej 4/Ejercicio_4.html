@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estilos.css" />
+  <title>Ejercicio 4 - Pueblos</title>
+</head>
+
+<body>
+  <form id="formularioPueblos">
+    <fieldset id="camposPueblos">
+      <legend>Pueblos</legend>
+        
+        <label>Provincia</label>
+        <select id="seleccionProvincia">
+          <optgroup label="Provincia"></optgroup>
+          <option value="alicante">Alicante</option>
+          <option value="castellon">Castellón</option>
+          <option value="valencia">Valencia</option>
+
+        </select>
+        <label>Población</label>
+        <select id="seleccionPueblo">
+          <optgroup label="Alicante" name="alc"></optgroup>
+            <option value="alicante" name="alc">Alicante</option>
+            <option value="elche" name="alc">Elche</option>
+            <option value="petrer" name="alc">Petrer</option>
+
+          <optgroup label="Castellon" name="cast"></optgroup>
+          <option value="castellon" name="cast">Castellon</option>
+          <option value="oropesa" name="cast">Oropesa</option>
+          <option value="vinaroz" name="cast">Vinaroz</option>
+
+          <optgroup label="Valencia" name="val"></optgroup>
+            <option value="valencia" name="val">Valencia</option>
+            <option value="xativa" name="val">Xàtiva</option>
+            <option value="torrent" name="val">Torrent</option>
+
+        </select>
+
+       
+    </fieldset>
+    <input type="submit" id="enviarDatos" value="Enviar Datos">
+</form>
+  <div id="resultado"></div>
+</body>
+<script type="module" src="Ejercicio_4.js"></script>
+</html>

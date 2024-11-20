@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./estilos.css" />
+  <title>Ejercicio 3 - Discos</title>
+</head>
+
+<body>
+  <form id="formularioDiscos">
+    <fieldset id="camposDisco">
+      <legend>Nuevo Disco</legend>
+          
+        <label>Nombre del disco:</label>
+        <input type="text" name="nom" placeholder="Introduce el nombre del disco">
+
+        <label>Grupo de música o Interprete:</label>
+        <input type="text" name="grupo" placeholder="Introduce el grupo o intérprete">
+
+        <label>Año de publicación</label>
+        <input type="date" name="fecha" placeholder="Selecciona la fecha de publicación">
+
+        <label>Tipo de Música</label>
+        <select id="seleccionMusica">
+          <optgroup label="Rock"></optgroup>
+          <option value="rock">Rock</option>
+          <option value="progressive">Progressive</option>
+          <option value="punk">Punk</option>
+          <option value="trash">Trash</option>
+          <optgroup label="Otros"></optgroup>
+          <option value="otros">Ni idea la verdad</option>
+
+        </select>
+
+        <label>Localización</label>
+        <input type="text" name="texto" placeholder="Introduce la localización">
+
+        <div  class="estilosPrestado">
+            <label>Prestado</label>
+            <input type="checkbox" value="prestado"> 
+        </div>
+       
+    </fieldset>
+  </form>
+  <div id="resultado"></div>
+  <section id="controles">
+    <button id="botonGuardarDisco">Guardar Disco</button>
+    <button id="botonMostrarDiscos">Mostrar Disco</button>
+  </section>
+</body>
+<script type="module" src="Ejercicio_3.js"></script>
+</html>

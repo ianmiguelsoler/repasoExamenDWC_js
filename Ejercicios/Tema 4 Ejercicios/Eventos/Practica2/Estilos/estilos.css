@@ -1,0 +1,61 @@
+.contenido {
+    display: none;
+}
+
+.acordeon {
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 30px;
+}
+
+.elemento {
+    background-color: rgb(25, 142, 245);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contenido {
+    background-color: rgb(162, 201, 235);
+    padding: 10px;
+}
+
+.contenido-visible {
+    display: block;
+}
+
+
+/*! EJERCICIO 2 */
+
+.botoness {
+    display: flex;
+    gap: 10px;
+}
+
+.botones {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+.botones.activa {
+    background-color: #555;
+    color: white;
+}
+
+.contenidoDiv {
+    display: none;
+    padding: 20px;
+    border-top: 2px solid #555;
+}
+
+.contenidoDiv:first-of-type {
+    display: block; /* Mostrar la primera pestaña al cargar */
+}
+
+.oculto{
+    display: none;
+}
