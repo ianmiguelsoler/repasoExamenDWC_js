@@ -6,8 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 setTimeout(() => {
     var tabla = document.getElementsByTagName("table")[0];
-    tabla.style.backgroundColor = "red"
-
+    var td = document.getElementsByTagName("td");
+    for (let contador = 0; contador < td.length; contador++) {
+        var numeroP =  Number(td[contador].innerText)
+        if(esPrimo(numeroP)){
+            td[contador].style.backgroundColor = "red"
+            td[contador].style.fontWeight = "bold"
+        }
+        
+    }
 }, 2000);
 }, false)
 
@@ -21,7 +28,7 @@ const creaTabla = (filas, columnas) => {
         // tabla.insertAdjacentHTML('beforeend', tr)
         var tr = document.createElement("tr");
         for (let contadorColumnas = 0; contadorColumnas < columnas; contadorColumnas++) {
-            tr.innerHTML += `<td>${contadorFilas +1},${contadorColumnas +1}</td>`;
+            tr.innerHTML += `<td>${contadorColumnas +1}</td>`;
             
         }
         tabla.appendChild(tr)
@@ -29,10 +36,12 @@ const creaTabla = (filas, columnas) => {
     body.appendChild(tabla)
 };
 
-function esPrimo(numero) {
-    if (numero <= 1) return false; // Los números menores o iguales a 1 no son primos
-    for (let i = 2; i <= Math.sqrt(numero); i++) { // Solo iterar hasta la raíz cuadrada
-        if (numero % i === 0) return false; // Si es divisible por cualquier número menor a él, no es primo
+
+const esPrimo = (numero) => {
+    if(numero<= 1) return false
+    for (let contador = 2; contador <= Math.sqrt(numero);contador++) {
+        if (numero % contador === 0) return false
+        
     }
-    return true; // Si no encontró divisores, es primo
-}
+    return true
+};
