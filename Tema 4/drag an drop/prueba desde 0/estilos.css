@@ -1,0 +1,35 @@
+#arrastrables,#zona_soltables{
+    display: flex;
+    padding: 20px;
+    width: 40%;
+}
+
+.soltables{
+    background-color: grey;
+    margin: 20px auto;
+}
+
+.arrastrable{
+    flex: 0 0 100px;
+    height: 160px;
+    text-align: center;
+    font-size: 90px;
+    background: rgb(230, 157, 109);
+    border: 1px solid;
+    cursor: pointer;
+}
+.arrastrable:hoover{
+    scale: 1.4;
+}
+.soltable{
+    flex: 0 0 100px;
+    height: 160px;
+    background: rgb(177, 175, 179);
+    padding: 10px;
+    margin: 10px 10px 0 0;
+}
+
+#arrastrables div {
+    margin: 10px 17px 0 10px;
+  }
+
