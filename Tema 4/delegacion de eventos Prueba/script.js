@@ -1,12 +1,16 @@
 "use strict";
 
 // Función para añadir un nuevo botón dinámico al contenedor.
-export function anadirBoton(contenedor) {
-  const nuevoBoton = document.createElement("button");
-  nuevoBoton.textContent = `Botón ${contenedor.children.length + 1}`;
-  nuevoBoton.className = "boton";
-  nuevoBoton.id = contenedor.children.length + 1
-  contenedor.appendChild(nuevoBoton);
+function anadirBoton(contenedor) {
+  // const nuevoBoton = document.createElement("button");
+  // nuevoBoton.textContent = `Botón ${contenedor.children.length + 1}`;
+  // nuevoBoton.className = "boton";
+  // nuevoBoton.id = contenedor.children.length + 1
+  // nuevoBoton.innerHTML = ``;
+  // contenedor.appendChild(nuevoBoton);
+  var div = document.getElementById("contenedor")
+  div.insertAdjacentHTML("beforeend",`<button id='5' class='boton'>Botón ${div.children.length + 1}</button>`);
+
 }
 
 // Función principal ejecutada al cargar la página.

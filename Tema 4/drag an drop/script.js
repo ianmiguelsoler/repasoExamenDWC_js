@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     //Primero le damos el atributo draggable a todos los que tengan la clase arrastable
 
     const arrastrables = document.getElementsByClassName("arrastrable");
+    
     for (let contador = 0; contador < arrastrables.length; contador++) {
         arrastrables[contador].setAttribute("draggable",true); 
     };
@@ -17,6 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
         elementoArrastrado = evento.target
         // evento.dataTransfer.setData("identificador", evento.target.id) // Guarda el id
         // evento.dataTransfer.setData("nombre", evento.target.localName) //Guarda el nombre 
+        console.log("Elemento id", evento.target.id)
+        console.log("Elemento localName", evento.target.localName)
         evento.dataTransfer.setData("id", elementoArrastrado.id) // Guarda el id
         evento.dataTransfer.setData("nombre", elementoArrastrado.localName) //Guarda el nombre 
     },false);
