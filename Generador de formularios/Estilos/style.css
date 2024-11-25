@@ -1,0 +1,116 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #444;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007BFF;
+    padding-bottom: 10px;
+  }
+  
+  /* Estilos para los botones */
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .actions button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .actions button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Estilos para el formulario dinámico */
+  .form {
+    margin-top: 20px;
+  }
+  
+  .form input,
+  .form textarea,
+  .form label,
+  .form button,
+  .form img {
+    display: block;
+    margin: 10px 0;
+    font-size: 14px;
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .form input,
+  .form textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  button[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsividad */
+  @media (max-width: 600px) {
+    .actions {
+      flex-direction: column;
+    }
+  
+    .actions button {
+      width: 100%;
+    }
+  }
+  
