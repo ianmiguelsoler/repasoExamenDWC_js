@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Discos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Registro de Discos</h1>
+        <div id="errores" class="errores"></div>
+        <form id="formDiscos">
+            <div class="form-control">
+                <label for="nombre">Nombre del disco:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-control">
+                <label for="grupo">Grupo de música o intérprete:</label>
+                <input type="text" id="grupo" name="grupo" required>
+            </div>
+            <div class="form-control">
+                <label for="anio">Año de publicación:</label>
+                <input type="number" id="anio" name="anio" min="1900" max="2100" required>
+            </div>
+            <div class="form-control">
+                <label for="tipoMusica">Tipo de música:</label>
+                <select id="tipoMusica" name="tipoMusica" required>
+                    <option value="rock">Rock</option>
+                    <option value="progressive">Progressive</option>
+                    <option value="punk">Punk</option>
+                    <option value="trash">Trash</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label for="localizacion">Localización (estantería):</label>
+                <input type="text" id="localizacion" name="localizacion" pattern="[A-Za-z0-9]+" required>
+            </div>
+            <div class="form-control">
+                <label for="prestado">¿Prestado?</label>
+                <input type="checkbox" class="prestado" name="prestado" value="si">Si
+                <input type="checkbox" class="prestado" name="prestado" value="no">No
+            </div>
+        </form>
+        <div class="botones">
+            <button type="button" id="guardar">Guardar</button>
+            <button type="button" id="mostrar">Mostrar</button>
+        </div>
+        <section id="zona_arrastrar">
+            <section id="arrastrables" class="soltable">
+                <div id="listadoDiscos" class="arrastrable">
+                    <!-- Aquí se mostrarán los discos -->
+                </div>
+            </section>
+    
+            <div id="soltables" class="soltable">
+                
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
