@@ -3,6 +3,12 @@
 // Verificar si un ID ya existe en el DOM
 const idExiste = (id) => document.getElementById(id) !== null;
 
+// Verificar si un NAME ya existe en el formulario
+const nameExiste = (name) => {
+  const elementos = document.querySelectorAll("#formularioDinamico [name]");
+  return Array.from(elementos).some((el) => el.name === name);
+};
+
 /**
  * Crea un <label> asociado a un elemento
  * @param {string} id - El ID del elemento
@@ -24,11 +30,16 @@ const crearInputTexto = () => {
     alert("El id ya está en uso. Introduce uno diferente.");
     return;
   }
+  const name = prompt("Introduce el nombre del input de texto:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   crearLabelPara(id, "Texto:");
   const input = document.createElement("input");
   input.type = "text";
   input.id = id;
-  input.name = id;
+  input.name = name;
   document.getElementById("formularioDinamico").appendChild(input);
   alert("Input de texto creado con éxito.");
 };
@@ -42,11 +53,16 @@ const crearInputPassword = () => {
     alert("El id ya está en uso. Introduce uno diferente.");
     return;
   }
+  const name = prompt("Introduce el nombre del input de contraseña:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   crearLabelPara(id, "Contraseña:");
   const input = document.createElement("input");
   input.type = "password";
   input.id = id;
-  input.name = id;
+  input.name = name;
   document.getElementById("formularioDinamico").appendChild(input);
   alert("Input de contraseña creado con éxito.");
 };
@@ -60,10 +76,15 @@ const crearTextarea = () => {
     alert("El id ya está en uso. Introduce uno diferente.");
     return;
   }
+  const name = prompt("Introduce el nombre del textarea:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   crearLabelPara(id, "Área de texto:");
   const textarea = document.createElement("textarea");
   textarea.id = id;
-  textarea.name = id;
+  textarea.name = name;
   textarea.cols = 40;
   textarea.rows = 5;
   document.getElementById("formularioDinamico").appendChild(textarea);
@@ -75,6 +96,10 @@ const crearTextarea = () => {
  */
 const crearCheckbox = () => {
   const name = prompt("Introduce el nombre del checkbox:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   const value = prompt("Introduce el valor del checkbox:");
   crearLabelPara(name, `Opción (${value}):`);
   const checkbox = document.createElement("input");
@@ -90,6 +115,10 @@ const crearCheckbox = () => {
  */
 const crearRadio = () => {
   const name = prompt("Introduce el nombre del radio:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   const value = prompt("Introduce el valor del radio:");
   crearLabelPara(name, `Opción (${value}):`);
   const radio = document.createElement("input");
@@ -109,11 +138,17 @@ const crearBoton = () => {
     alert("El id ya está en uso. Introduce uno diferente.");
     return;
   }
+  const name = prompt("Introduce el nombre del botón:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   const value = prompt("Introduce el valor del botón:");
   crearLabelPara(id, "Botón:");
   const button = document.createElement("button");
   button.type = "submit";
   button.id = id;
+  button.name = name;
   button.textContent = value;
   document.getElementById("formularioDinamico").appendChild(button);
   alert("Botón creado con éxito.");
@@ -128,10 +163,16 @@ const crearImagen = () => {
     alert("El id ya está en uso. Introduce uno diferente.");
     return;
   }
+  const name = prompt("Introduce el nombre de la imagen:");
+  if (nameExiste(name)) {
+    alert("El nombre ya está en uso. Introduce uno diferente.");
+    return;
+  }
   const src = prompt("Introduce la ruta de la imagen:");
   crearLabelPara(id, "Imagen:");
   const img = document.createElement("img");
   img.id = id;
+  img.name = name;
   img.src = src;
   document.getElementById("formularioDinamico").appendChild(img);
   alert("Imagen creada con éxito.");
