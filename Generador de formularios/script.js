@@ -1,6 +1,6 @@
 "use strict";
 
-// Importar funciones desde funciones.js
+// Importar funciones desde funciones.js.
 import {
   crearInputTexto,
   crearInputPassword,
@@ -15,11 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const actionsContainer = document.querySelector(".actions");
 
-  // Delegación de eventos en el contenedor de botones
+  // Delegación de eventos en el contenedor de botones.
   actionsContainer.addEventListener("click", (event) => {
-    if (event.target.tagName !== "BUTTON") return; // Ignorar clics fuera de botones
+    if (event.target.tagName !== "BUTTON") return; // Ignorar clics fuera de botones.
 
-    const buttonId = event.target.id; // Obtener el ID del botón clickeado
+    const buttonId = event.target.id; // Obtener el ID del botón clickeado.
 
     switch (buttonId) {
       case "btn-texto":
